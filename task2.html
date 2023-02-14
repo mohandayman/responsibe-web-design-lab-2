@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{background-color: aquamarine;}
+      .container {
+        display: grid;
+        margin-top: 200px;
+        height: 500px;
+        width: 70%;
+        margin: 80px auto;
+        grid-template-areas: 
+        "a1 a2 a2"
+        "a1 a3 a4"
+        "a5 a5 a4";
+        transform: rotate(20deg);
+        animation: rotateSquare 5s linear  infinite forwards ;
+       
+      }
+       @keyframes rotateSquare{
+           20%{ transform: rotate(50deg);}
+           40%{ transform: rotate(100deg);}
+           60%{ transform: rotate(150deg);}
+           80%{ transform: rotate(200deg);}
+           90%{ transform: rotate(250deg);}
+           100%{ transform: rotate(360deg);}
+       } 
+      .container>div{
+          background-color: rgb(51, 40, 40);
+          margin: 5px;
+          color: #FFF;
+          text-align: center;
+          
+      }
+      .div1 {
+        grid-area: a1;
+      }
+      .div2 {
+        grid-area: a2;
+
+      }
+      .div3 {
+        grid-area: a3;
+
+      }
+      .div4 {
+        grid-area: a4;
+
+      }
+      .div5 {
+        grid-area: a5;
+
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="div1">1</div>
+      <div class="div2">2</div>
+      <div class="div3">3</div>
+      <div class="div4">4</div>
+      <div class="div5">5</div>
+    </div>
+  </body>
+</html>
